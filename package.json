@@ -1,0 +1,12 @@
+{
+    "name": "nwdemo",
+    "version":"0.0.1",
+    "main": "index.html",
+    "window": {
+        "width": 400,
+        "height":500
+    },
+    "dependencies": {
+        "canvas": "^1.4.0"
+    }
+}
