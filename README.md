@@ -10,8 +10,9 @@ and package it to an windows desktop app using nw.js
 1. do as [node-canvas Installation windows](https://github.com/Automattic/node-canvas/wiki/Installation---Windows) says
 1. npm install
 1. npm install nw-gyp -g
+1. if you are using windows, just run nwgyp_rebuild.bat. else do the following step. 
 1. cd node_modules/canvas and run "nw-gyp rebuild --target=0.17.0 --arch=x64"
-when error, modify the file common.gypi in folder like "C:\Users\Administrator\.nw-gyp\0.17.0" as below
+when error, modify the file common.gypi in folder like "C:\Users\\%UserName%\\.nw-gyp\0.17.0" as below
 
 ```
 line 36: ['OS=="win"', {
@@ -22,7 +23,9 @@ line 133: 'RuntimeLibrary': '<(win_release_RuntimeLibrary)', # static release
 #### debug
 in root path of demo, run "nw ."
 #### release
-in root path of demo, run "nwbuild -p win64 ."
+in root path of demo, run "nwbuild -p win64 release"
+
+if you are using vscode for text editor, use ctrl+shift+b to build.
 #### note
 press F12 to open chrome developer tools
 some code is copied from [Master76/dostudy](https://github.com/Master76/dostudy) :)
